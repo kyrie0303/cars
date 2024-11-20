@@ -1,0 +1,136 @@
+{
+  "devices": [
+    {
+      "id": "dev001",
+      "name": "Temperature Sensor A1",
+      "type": "temperature",
+      "status": "active",
+      "locationId": "loc001",
+      "lastMaintenance": "2024-01-15",
+      "batteryLevel": 85,
+      "firmwareVersion": "2.3.1"
+    },
+    {
+      "id": "dev002",
+      "name": "Humidity Sensor H1",
+      "type": "humidity",
+      "status": "active",
+      "locationId": "loc001",
+      "lastMaintenance": "2024-02-01",
+      "batteryLevel": 92,
+      "firmwareVersion": "1.9.4"
+    },
+    {
+      "id": "dev003",
+      "name": "Motion Detector M1",
+      "type": "motion",
+      "status": "maintenance",
+      "locationId": "loc002",
+      "lastMaintenance": "2023-12-20",
+      "batteryLevel": 45,
+      "firmwareVersion": "3.0.0"
+    },
+    {
+      "id": "dev004",
+      "name": "Light Controller L1",
+      "type": "lighting",
+      "status": "active",
+      "locationId": "loc002",
+      "lastMaintenance": "2024-01-30",
+      "batteryLevel": 78,
+      "firmwareVersion": "2.1.0"
+    },
+    {
+      "id": "dev005",
+      "name": "CO2 Sensor C1",
+      "type": "air_quality",
+      "status": "inactive",
+      "locationId": "loc003",
+      "lastMaintenance": "2024-01-10",
+      "batteryLevel": 15,
+      "firmwareVersion": "1.8.2"
+    },
+    {
+      "id": "dev006",
+      "name": "Smart Lock S1",
+      "type": "security",
+      "status": "active",
+      "locationId": "loc003",
+      "lastMaintenance": "2024-02-10",
+      "batteryLevel": 90,
+      "firmwareVersion": "4.1.1"
+    },
+    {
+      "id": "dev007",
+      "name": "Temperature Sensor A2",
+      "type": "temperature",
+      "status": "active",
+      "locationId": "loc004",
+      "lastMaintenance": "2024-01-25",
+      "batteryLevel": 88,
+      "firmwareVersion": "2.3.1"
+    },
+    {
+      "id": "dev008",
+      "name": "Ventilation Control V1",
+      "type": "hvac",
+      "status": "active",
+      "locationId": "loc004",
+      "lastMaintenance": "2024-02-05",
+      "batteryLevel": 95,
+      "firmwareVersion": "3.2.0"
+    },
+    {
+      "id": "dev009",
+      "name": "Water Leak Detector W1",
+      "type": "leak",
+      "status": "active",
+      "locationId": "loc005",
+      "lastMaintenance": "2024-01-20",
+      "batteryLevel": 82,
+      "firmwareVersion": "1.5.3"
+    },
+    {
+      "id": "dev010",
+      "name": "Energy Meter E1",
+      "type": "power",
+      "status": "active",
+      "locationId": "loc005",
+      "lastMaintenance": "2024-02-15",
+      "batteryLevel": 87,
+      "firmwareVersion": "2.7.0"
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc001",
+      "name": "Server Room A",
+      "floor": "1st Floor",
+      "building": "Main Building"
+    },
+    {
+      "id": "loc002",
+      "name": "Conference Room B",
+      "floor": "2nd Floor",
+      "building": "Main Building"
+    },
+    {
+      "id": "loc003",
+      "name": "Security Office",
+      "floor": "Ground Floor",
+      "building": "Main Building"
+    },
+    {
+      "id": "loc004",
+      "name": "Data Center",
+      "floor": "Basement",
+      "building": "Tech Wing"
+    },
+    {
+      "id": "loc005",
+      "name": "Utility Room",
+      "floor": "Basement",
+      "building": "Tech Wing"
+    }
+  ]
+}

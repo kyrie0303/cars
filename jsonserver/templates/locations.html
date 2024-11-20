@@ -1,0 +1,31 @@
+html
+{% extends "base.html" %}
+
+{% block title %}Locaties{% endblock %}
+
+{% block content %}
+<div class="w3-container">
+    <h2>Locaties Overzicht</h2>
+    
+    <table class="w3-table-all w3-hoverable">
+        <thead>
+            <tr class="w3-light-grey">
+                <th>ID</th>
+                <th>Naam</th>
+                <th>Verdieping</th>
+                <th>Gebouw</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location in locations %}
+            <tr>
+                <td>{{ location.id }}</td>
+                <td>{{ location.name }}</td>
+                <td>{{ location.floor }}</td>
+                <td>{{ location.building }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

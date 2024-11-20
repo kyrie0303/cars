@@ -1,0 +1,39 @@
+html
+{% extends "base.html" %}
+
+{% block title %}Apparaten{% endblock %}
+
+{% block content %}
+<div class="w3-container">
+    <h2>Apparaten Overzicht</h2>
+    
+    <table class="w3-table-all w3-hoverable">
+        <thead>
+            <tr class="w3-light-grey">
+                <th>ID</th>
+                <th>Naam</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Locatie</th>
+                <th>Laatste Onderhoud</th>
+                <th>Batterijniveau</th>
+                <th>Firmware Versie</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for device in devices %}
+            <tr>
+                <td>{{ device.id }}</td>
+                <td>{{ device.name }}</td>
+                <td>{{ device.type }}</td>
+                <td>{{ device.status }}</td>
+                <td>{{ device.location.name }}</td>
+                <td>{{ device.lastMaintenance }}</td>
+                <td>{{ device.batteryLevel }}%</td>
+                <td>{{ device.firmwareVersion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

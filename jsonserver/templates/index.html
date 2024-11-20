@@ -1,0 +1,69 @@
+html
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="w3-container">
+    <h2>Dashboard Overzicht</h2>
+    
+    <div class="w3-row-padding">
+        <div class="w3-third w3-margin-bottom">
+            <div class="w3-card-4">
+                <div class="w3-container w3-blue">
+                    <h3>Totaal Apparaten</h3>
+                </div>
+                <div class="w3-container">
+                    <p>{{ devices|length }} Apparaten</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="w3-card-4">
+                <div class="w3-container w3-green">
+                    <h3>Actieve Apparaten</h3>
+                </div>
+                <div class="w3-container">
+                    <p>{{ devices|selectattr('status', 'eq', 'active')|list|length }} Actief</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="w3-card-4">
+                <div class="w3-container w3-red">
+                    <h3>Locaties</h3>
+                </div>
+                <div class="w3-container">
+                    <p>{{ locations|length }} Locaties</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Recente Apparaten</h3>
+    <table class="w3-table-all w3-hoverable">
+        <thead>
+            <tr class="w3-light-grey">
+                <th>Naam</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Locatie</th>
+                <th>Laatste Onderhoud</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for device in devices[:5] %}
+            <tr>
+                <td>{{ device.name }}</td>
+                <td>{{ device.type }}</td>
+                <td>{{ device.status }}</td>
+                <td>{{ device.location.name }}</td>
+                <td>{{ device.lastMaintenance }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
